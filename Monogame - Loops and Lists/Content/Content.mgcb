@@ -23,7 +23,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/16-bit-planet1[1].png;Images/planet1.png
+/build:Images/16-bit-planet1[1].png
 
 #begin Images/16-bit-planet10[1].png
 /importer:TextureImporter
@@ -35,7 +35,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/16-bit-planet10[1].png;Images/planet10.png
+/build:Images/16-bit-planet10[1].png
 
 #begin Images/16-bit-planet11[1].png
 /importer:TextureImporter
@@ -47,7 +47,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/16-bit-planet11[1].png;Images/planet11.png
+/build:Images/16-bit-planet11[1].png
 
 #begin Images/16-bit-planet12[1].png
 /importer:TextureImporter
@@ -59,7 +59,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/16-bit-planet12[1].png;Images/planet12.png
+/build:Images/16-bit-planet12[1].png
 
 #begin Images/16-bit-planet13[1].png
 /importer:TextureImporter
@@ -71,7 +71,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/16-bit-planet13[1].png;Images/planet13.png
+/build:Images/16-bit-planet13[1].png
 
 #begin Images/16-bit-planet2[1].png
 /importer:TextureImporter
@@ -83,7 +83,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/16-bit-planet2[1].png;Images/planet2.png
+/build:Images/16-bit-planet2[1].png
 
 #begin Images/16-bit-planet3[1].png
 /importer:TextureImporter
@@ -95,7 +95,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/16-bit-planet3[1].png;Images/planet3.png
+/build:Images/16-bit-planet3[1].png
 
 #begin Images/16-bit-planet4[1].png
 /importer:TextureImporter
@@ -107,7 +107,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/16-bit-planet4[1].png;Images/planet4.png
+/build:Images/16-bit-planet4[1].png
 
 #begin Images/16-bit-planet5[1].png
 /importer:TextureImporter
@@ -119,7 +119,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/16-bit-planet5[1].png;Images/planet5.png
+/build:Images/16-bit-planet5[1].png
 
 #begin Images/16-bit-planet6[1].png
 /importer:TextureImporter
@@ -131,7 +131,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/16-bit-planet6[1].png;Images/planet6.png
+/build:Images/16-bit-planet6[1].png
 
 #begin Images/16-bit-planet7[1].png
 /importer:TextureImporter
@@ -143,7 +143,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/16-bit-planet7[1].png;Images/planet7.png
+/build:Images/16-bit-planet7[1].png
 
 #begin Images/16-bit-planet8[1].png
 /importer:TextureImporter
@@ -155,7 +155,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/16-bit-planet8[1].png;Images/planet8.png
+/build:Images/16-bit-planet8[1].png
 
 #begin Images/16-bit-planet9[1].png
 /importer:TextureImporter
@@ -167,7 +167,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/16-bit-planet9[1].png;Images/planet9.png
+/build:Images/16-bit-planet9[1].png
 
 #begin Images/space_background[1].jpg
 /importer:TextureImporter
@@ -179,5 +179,5 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/space_background[1].jpg;Images/spaceBackground.jpg
+/build:Images/space_background[1].jpg
 
