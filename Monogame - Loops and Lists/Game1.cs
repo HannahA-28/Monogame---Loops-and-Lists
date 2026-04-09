@@ -6,11 +6,21 @@ using System.Collections.Generic;
 
 namespace Monogame___Loops_and_Lists
 {
+    
+
     public class Game1 : Game
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
+        Random generator;
+        Rectangle window;
+        Texture2D spaceBackgroundTexture;
+        List<Texture2D> textures;
+        List<Rectangle> planetRects;
+        List<Texture2D> planetTextures;
+        float seconds;
+        float respawnTime;
 
         public Game1()
         {
@@ -18,12 +28,6 @@ namespace Monogame___Loops_and_Lists
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
         }
-
-        Random generator;
-        Rectangle window;
-        Texture2D spaceBackgroundTexture;
-        List<Texture2D> textures;
-        List<Rectangle> planetRects;
 
         protected override void Initialize()
         {
@@ -43,6 +47,11 @@ namespace Monogame___Loops_and_Lists
                     );
             }
 
+            planetTextures = new List<Texture2D>();
+
+            seconds = 0f;
+            respawnTime = 3f;
+
             base.Initialize();
         }
 
@@ -54,7 +63,7 @@ namespace Monogame___Loops_and_Lists
 
             spaceBackgroundTexture = Content.Load<Texture2D>("Images/space_background[1]");
             for (int i = 1; i <= 13; i++)
-                textures.Add(Content.Load<Texture2D>("Images/16-bit-planet[1]" + i));
+                textures.Add(Content.Load<Texture2D>("Images/16-bit-planet" + i + "[1]"));
 
         }
 
@@ -64,6 +73,12 @@ namespace Monogame___Loops_and_Lists
                 Exit();
 
             // TODO: Add your update logic here
+
+            seconds += (float)gameTime.ElapsedGameTime.TotalSeconds
+            if (seconds > respawnTime)
+            {
+                seconds = 0f;
+            }
 
             base.Update(gameTime);
         }
@@ -79,6 +94,12 @@ namespace Monogame___Loops_and_Lists
             _spriteBatch.Draw(spaceBackgroundTexture, window, Color.White);
             for (int i = 0; i < planetRects.Count; i++)
                 _spriteBatch.Draw(textures[0], planetRects[i], Color.White);
+            for (int i = 1; i <= 13; i++)
+                textures.Add(Content.Load<Texture2D>("Images/16-bit-planet" + i + "[1]"));
+            for (int i = 0; i < planetRects.Count; i++)
+                planetTextures.Add(textures[generator.Next(textures.Count)]);
+            for (int i = 0; i < planetRects.Count; i++)
+                _spriteBatch.Draw(planetTextures[i], planetRects[i], Color.White);
 
             _spriteBatch.End();
 
