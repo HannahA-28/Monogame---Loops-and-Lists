@@ -21,6 +21,7 @@ namespace Monogame___Loops_and_Lists
         List<Texture2D> planetTextures;
         float seconds;
         float respawnTime;
+        MouseState mouseState;
 
         public Game1()
         {
@@ -33,7 +34,7 @@ namespace Monogame___Loops_and_Lists
         {
             // TODO: Add your initialization logic here
 
-            window = new Rectangle(0, 0, _graphics.PreferredBackBufferWidth, _graphics.PreferredBackBufferWidth);
+            window = new Rectangle(0, 0, _graphics.PreferredBackBufferWidth, _graphics.PreferredBackBufferHeight);
             generator = new Random();
             textures = new List<Texture2D>();
             planetRects = new List<Rectangle>();
@@ -65,6 +66,9 @@ namespace Monogame___Loops_and_Lists
             for (int i = 1; i <= 13; i++)
                 textures.Add(Content.Load<Texture2D>("Images/16-bit-planet" + i + "[1]"));
 
+            for (int i = 0; i < planetRects.Count; i++)
+                planetTextures.Add(textures[generator.Next(textures.Count)]);
+
         }
 
         protected override void Update(GameTime gameTime)
@@ -74,9 +78,29 @@ namespace Monogame___Loops_and_Lists
 
             // TODO: Add your update logic here
 
-            seconds += (float)gameTime.ElapsedGameTime.TotalSeconds
+            mouseState = Mouse.GetState();
+            if (mouseState.LeftButton == ButtonState.Pressed)
+            {
+                for (int i = 0; i < planetRects.Count; i++)
+                {
+                    if (planetRects[i].Contains(mouseState.Position))
+                    {
+                        planetRects.RemoveAt(i);
+                        planetTextures.RemoveAt(i);
+                    }
+                }
+            }
+           
+            seconds += (float)gameTime.ElapsedGameTime.TotalSeconds;
             if (seconds > respawnTime)
             {
+                planetRects.Add
+                    (
+                        new Rectangle(generator.Next(window.Width - 25),
+                        generator.Next(window.Height - 25), 25, 25)
+                    );
+                planetTextures.Add(textures[generator.Next(textures.Count)]);
+
                 seconds = 0f;
             }
 
@@ -93,13 +117,10 @@ namespace Monogame___Loops_and_Lists
 
             _spriteBatch.Draw(spaceBackgroundTexture, window, Color.White);
             for (int i = 0; i < planetRects.Count; i++)
-                _spriteBatch.Draw(textures[0], planetRects[i], Color.White);
-            for (int i = 1; i <= 13; i++)
-                textures.Add(Content.Load<Texture2D>("Images/16-bit-planet" + i + "[1]"));
-            for (int i = 0; i < planetRects.Count; i++)
-                planetTextures.Add(textures[generator.Next(textures.Count)]);
-            for (int i = 0; i < planetRects.Count; i++)
                 _spriteBatch.Draw(planetTextures[i], planetRects[i], Color.White);
+                        
+            //for (int i = 0; i < planetRects.Count; i++)
+            //    _spriteBatch.Draw(planetTextures[i], planetRects[i], Color.White);
 
             _spriteBatch.End();
 
